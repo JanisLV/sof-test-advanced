@@ -5,7 +5,7 @@ Welcome to the **Testing - Advanced Features** module!
 During the Testing - Fundamentals module you were exposed to the basic aspects of automated testing. You've learnt about the importance of testing 
 in software development and how to properly ensure that your methods are actually behaving as you're expecting them to.<br>
 
-However, as your programming skills developed and the code you're writing became more and more complex, so does the testing that
+However, as your programming skills developed and the code you're writing became more and more complex, also the testing that
 validates it must keep up and be able to ensure that every edge case is covered. Think about testing database integrations or web controllers.
 
 
@@ -20,7 +20,7 @@ Some of the more advanced frameworks and testing features that are going to be e
 
 
 ## Presentation
-Presentation is available under [this link](https://gitlab.com/sda-international/program/java/spring/wikis/uploads/e180ee4167ab715df11dc687a5c968e8/11_Spring.pdf).
+Presentation is available under [this link](https://gitlab.com/sda-international/program/java/testing-advanced-features/wikis/uploads/c9c920ff53521174c9f77d8995e7c392/09_Software_Testing_Advanced_Features.pdf).
 
 # Further reading
 
