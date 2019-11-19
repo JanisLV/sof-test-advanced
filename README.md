@@ -1,6 +1,6 @@
 # Introduction
 
-Welcome to the **Testing - Advanced Features** module!
+Welcome to the **Software Testing - Advanced Features** module!
 
 During the Testing - Fundamentals module you were exposed to the basic aspects of automated testing. You've learnt about the importance of testing 
 in software development and how to properly ensure that your methods are actually behaving as you're expecting them to.<br>
@@ -20,7 +20,7 @@ Some of the more advanced frameworks and testing features that are going to be e
 
 
 ## Presentation
-Presentation is available under [this link](https://gitlab.com/sda-international/program/java/testing-advanced-features/wikis/uploads/c9c920ff53521174c9f77d8995e7c392/09_Software_Testing_Advanced_Features.pdf).
+Presentation is available under [this link](https://gitlab.com/sda-international/program/java/testing-advanced-features/wikis/uploads/d5f8a6b72b0c4b3fcb3e44b5a3a79ba2/17_Software_Testing_Advanced_Features.pdf).
 
 # Further reading
 
