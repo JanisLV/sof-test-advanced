@@ -3,7 +3,6 @@ import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.Mock;
 import org.mockito.junit.jupiter.MockitoExtension;
 
-import java.time.LocalDate;
 import java.util.Collections;
 import java.util.List;
 
@@ -13,7 +12,7 @@ import static org.mockito.ArgumentMatchers.anyString;
 import static org.mockito.Mockito.*;
 
 @ExtendWith(MockitoExtension.class)
-public class CarRentalTest {
+class CarRentalTest {
 
     @Mock
     Agency agencyMock;
@@ -42,6 +41,7 @@ public class CarRentalTest {
     @Test
     void whenExample1() {
         List<Car> cars = agencyMock.findCar(5, "sedan");
+
         assertNotNull(cars);
         assertTrue(cars.isEmpty());
     }
@@ -53,6 +53,7 @@ public class CarRentalTest {
                 .thenReturn(Collections.singletonList(someCar));
 
         List<Car> flight = agencyMock.findCar(5, "sedan");
+
         assertEquals(1, flight.size());
         assertEquals(someCar, flight.get(0));
     }

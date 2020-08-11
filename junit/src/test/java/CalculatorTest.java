@@ -1,5 +1,5 @@
 import org.junit.jupiter.api.*;
-import org.junit.jupiter.api.extension.ContainerExtensionContext;
+import org.junit.jupiter.api.extension.ExtensionContext;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.converter.ConvertWith;
 import org.junit.jupiter.params.converter.SimpleArgumentConverter;
@@ -13,7 +13,7 @@ import java.util.stream.Stream;
 import static org.junit.jupiter.api.Assertions.*;
 
 
-public class CalculatorTest {
+class CalculatorTest {
 
     private Calculator calculator;
 
@@ -28,12 +28,12 @@ public class CalculatorTest {
     }
 
     @BeforeEach
-    public void setup(){
+    void setup(){
         calculator = new Calculator();
     }
 
     @Test
-    public void shouldReturnAdd(){
+    void shouldReturnAdd() {
         //given
         Calculator calc = new Calculator();
         //when
@@ -42,13 +42,14 @@ public class CalculatorTest {
         assertEquals(23, result);
     }
 
-    @Test
     @RepeatedTest(3)
     public void shouldReturnAddRepeat(){
         //given
         Calculator calc = new Calculator();
+
         //when
         double result = calc.add(15, 8);
+
         //then
         assertEquals(23, result);
     }
@@ -56,10 +57,8 @@ public class CalculatorTest {
     @Test
     public void shouldAcceptDivideByZero(){
         IllegalArgumentException exception =
-                Assertions.assertThrows(IllegalArgumentException.class,
-                        () -> {
-                            calculator.divide(10,0);
-                        });
+                assertThrows(IllegalArgumentException.class, () -> calculator.divide(10,0));
+
         assertEquals("Divide by 0", exception.getMessage());
     }
 
@@ -73,19 +72,19 @@ public class CalculatorTest {
     }
 
     @ParameterizedTest
-    @ValueSource(doubles = {10.0, -23.0, 12.0, -2.0})
+    @ValueSource(doubles = { 10.0, -23.0, 12.0, -2.0 })
     public void shouldReturnReverseSign(double a){
         assertEquals(-1 * a, calculator.reverseSign(a));
     }
 
     @ParameterizedTest
-    @MethodSource(names = "getParameters")
+    @MethodSource("getParameters")
     public void shouldReturnReverseSing2(double a){
         assertEquals(-1 * a, calculator.reverseSign(a));
     }
 
-    static Stream getParameters(){
-        return Stream.of(1.0, -231.0, 26.0, -98.0, 100.0);
+    static Stream<Arguments> getParameters(){
+        return Stream.of(Arguments.of(1.0, -231.0, 26.0, -98.0, 100.0));
     }
 
     @ParameterizedTest
@@ -96,8 +95,8 @@ public class CalculatorTest {
 
     static class Parameters implements ArgumentsProvider {
         @Override
-        public Stream<? extends Arguments> arguments(ContainerExtensionContext containerExtensionContext) throws Exception{
-            return Stream.of(23.0, -56.0, 64.92, -0.32).map(ObjectArrayArguments::create);
+        public Stream<? extends Arguments> provideArguments(final ExtensionContext context) {
+            return Stream.of(Arguments.of(23.0, -56.0, 64.92, -0.32));
         }
     }
 
