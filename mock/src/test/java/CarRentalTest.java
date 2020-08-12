@@ -15,7 +15,7 @@ import static org.mockito.Mockito.*;
 class CarRentalTest {
 
     @Mock
-    Agency agencyMock;
+    private Agency agencyMock;
 
     @Test
     void verifyExample1() {
