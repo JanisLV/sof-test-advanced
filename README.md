@@ -20,7 +20,7 @@ Some of the more advanced frameworks and testing features that are going to be e
 
 
 ## Presentation
-Presentation is available under [this link](https://gitlab.com/sda-international/program/java/testing-advanced-features/wikis/uploads/d5f8a6b72b0c4b3fcb3e44b5a3a79ba2/17_Software_Testing_Advanced_Features.pdf).
+Presentation is available under [this link](junit/17_Software_Testing_Advanced_Features_v2.0.pdf).
 
 # Further reading
 
